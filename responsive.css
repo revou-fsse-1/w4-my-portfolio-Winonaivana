@@ -1,0 +1,514 @@
+@media (max-width: 280px) {
+  .container {
+    background-color: #fd8a8a;
+    width: auto;
+    height: 100vh;
+  }
+
+  .container {
+    display: grid;
+    width: auto;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "box1 box2 box3 box3"
+      "box4 box5 box6 box7"
+      "box4 box8 box6 box7";
+    grid-gap: 10px;
+    padding: 20px;
+  }
+
+  .box {
+    width: auto;
+    border-radius: 10px;
+    transition: all 0.8s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box1 {
+    background-color: #fefefe;
+    grid-area: box1;
+  }
+
+  .box1 p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 7px;
+    font-weight: bold;
+    text-align: center;
+    color: #698269;
+  }
+
+  .box1:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box2 {
+    background-color: #a8d1d1;
+    grid-area: box2;
+  }
+
+  .box2 p {
+    color: white;
+    font-size: 6px;
+  }
+  .box2:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .box3 {
+    background-color: #9ea1d4;
+    grid-area: box3;
+  }
+
+  .box3:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .box3 p {
+    color: white;
+    font-size: 6px;
+  }
+
+  .box4 {
+    background-color: #a8d1d1;
+    grid-area: box4;
+  }
+  .rocket {
+    align-items: center;
+    width: 80px;
+  }
+  .box4:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .box5 {
+    background-color: #a8d1d1;
+    grid-area: box5;
+  }
+
+  .box5:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box5 p {
+    color: white;
+    font-size: 6px;
+  }
+
+  .box6 {
+    background-color: #f1f7b5;
+    grid-area: box6;
+  }
+  .heli {
+    align-items: center;
+    width: 90px;
+  }
+
+  .box6:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box7 {
+    background-color: #a8d1d1;
+    grid-area: box7;
+  }
+  .box7:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .blip {
+    align-items: center;
+    width: 80px;
+  }
+
+  .box8 {
+    background-color: #9ea1d4;
+    grid-area: box8;
+  }
+
+  .box8:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box8 p {
+    color: white;
+    font-size: 6px;
+  }
+
+  .about {
+    background-color: #9ea1d4;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .about header .name {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    left: 30px;
+    bottom: -90px;
+  }
+
+  span {
+    color: black;
+  }
+
+  .about header .me {
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+    left: 30px;
+    top: 360px;
+  }
+
+  .about header .btn {
+    text-decoration: none;
+    transition: all 0.8s;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 40px;
+    background: #fd8a8a;
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    bottom: -200px;
+    left: 30px;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    bottom: -248px;
+    width: 100%;
+    height: 40px;
+    background: #9ea1d4;
+    z-index: 1000;
+  }
+  .portfolio {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+
+    background-color: #fd8a8a;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .portfolio .title {
+    position: relative;
+    left: 30px;
+    top: 20px;
+    font-size: 2vw;
+  }
+
+  .title2 {
+    font-size: 5vw;
+    font-weight: 600;
+
+    position: relative;
+    left: 30px;
+    top: 30px;
+  }
+
+  .description {
+    position: relative;
+    left: 30px;
+    top: 140px;
+    font-size: 1.8vw;
+  }
+
+  .apple {
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 4px;
+    width: 50px;
+    height: 2px;
+    position: relative;
+    top: 144px;
+    left: 30px;
+    background-color: white;
+  }
+
+  .apple .ios {
+    font-size: 4px;
+    position: relative;
+    left: 8px;
+    top: -7px;
+  }
+  .App {
+    font-size: 4px;
+    font-weight: 500;
+    position: relative;
+    left: 8px;
+    top: -7px;
+  }
+
+  .logo {
+    width: 13px;
+    position: relative;
+    left: -8px;
+    top: -24px;
+  }
+
+  .samsung {
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 4px;
+    width: 50px;
+    height: 2px;
+    position: relative;
+    top: 144px;
+    left: 30px;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .samsung .android {
+    font-size: 4px;
+    position: relative;
+    left: 8px;
+    top: -7px;
+  }
+  .App1 {
+    font-size: 4px;
+    font-weight: 500;
+    position: relative;
+    left: 8px;
+    top: -7px;
+  }
+
+  .logo1 {
+    width: 12px;
+    position: relative;
+    left: -8px;
+    top: -24px;
+  }
+
+  .macbook {
+    position: absolute;
+    top: 538px;
+    left: -10px;
+    max-width: 100%;
+
+    overflow: hidden;
+  }
+
+  .mac {
+    height: 100%;
+    width: 240px;
+    overflow-x: hidden;
+  }
+
+  .imgbg {
+    position: absolute;
+    top: 42px;
+    left: 60px;
+    width: 120px;
+    height: 82px;
+    border-radius: 1px;
+    background: url(images/page.png);
+    background-position: top;
+    background-size: 100%;
+    transition: 13s;
+  }
+
+  .imgbg:hover {
+    background-position: bottom;
+  }
+
+  .blob {
+    position: relative;
+    top: -115px;
+    left: 395px;
+    width: 50px;
+  }
+
+  .hover {
+    font-size: 5px;
+    position: relative;
+    left: 410px;
+    bottom: 155px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 100%) {
+  .container {
+    background-color: #fd8a8a;
+    width: auto;
+    height: 100vh;
+  }
+
+  .container {
+    display: grid;
+    width: auto;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box5"
+      "box8";
+    grid-gap: 10px;
+    padding: 20px;
+  }
+
+  .box {
+    width: auto;
+    border-radius: 10px;
+    transition: all 0.8s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box1 {
+    background-color: #fefefe;
+    grid-area: box1;
+  }
+
+  .box1 p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 7px;
+    font-weight: bold;
+    text-align: center;
+    color: #698269;
+  }
+
+  .box1:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box2 {
+    background-color: #a8d1d1;
+    grid-area: box2;
+  }
+
+  .box2 p {
+    color: white;
+    font-size: 6px;
+  }
+  .box2:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .box3 {
+    background-color: #9ea1d4;
+    grid-area: box3;
+  }
+
+  .box3:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .box3 p {
+    color: white;
+    font-size: 6px;
+  }
+
+  .box4 {
+    background-color: #a8d1d1;
+    grid-area: box4;
+  }
+  .rocket {
+    align-items: center;
+    width: 80px;
+  }
+  .box4:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .box5 {
+    background-color: #a8d1d1;
+    grid-area: box5;
+  }
+
+  .box5:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box5 p {
+    color: white;
+    font-size: 6px;
+  }
+
+  .box6 {
+    background-color: #f1f7b5;
+    grid-area: box6;
+  }
+  .heli {
+    align-items: center;
+    width: 90px;
+  }
+
+  .box6:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box7 {
+    background-color: #a8d1d1;
+    grid-area: box7;
+  }
+  .box7:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .blip {
+    align-items: center;
+    width: 80px;
+  }
+
+  .box8 {
+    background-color: #9ea1d4;
+    grid-area: box8;
+  }
+
+  .box8:hover {
+    transform: translateY(5px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .box8 p {
+    color: white;
+    font-size: 6px;
+  }
+}
