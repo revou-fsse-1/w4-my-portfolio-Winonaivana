@@ -1,386 +1,347 @@
-@media (max-width: 280px) {
-  .container {
-    background-color: #fd8a8a;
-    width: auto;
-    height: 100vh;
-  }
-
-  .container {
-    display: grid;
-    width: auto;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "box1 box2 box3 box3"
-      "box4 box5 box6 box7"
-      "box4 box8 box6 box7";
-    grid-gap: 10px;
+@media (max-width: 1000px) {
+  header {
     padding: 20px;
   }
 
-  .box {
-    width: auto;
-    border-radius: 10px;
-    transition: all 0.8s;
-    cursor: pointer;
-    position: relative;
+  header .logo {
+    font-size: 30px;
+  }
+  header ul.navbar {
+    display: none;
+  }
+  header ul.navbar.active {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-  }
-
-  .box1 {
-    background-color: #fefefe;
-    grid-area: box1;
-  }
-
-  .box1 p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 7px;
-    font-weight: bold;
-    text-align: center;
-    color: #698269;
-  }
-
-  .box1:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-
-  .box2 {
-    background-color: #a8d1d1;
-    grid-area: box2;
-  }
-
-  .box2 p {
-    color: white;
-    font-size: 6px;
-  }
-  .box2:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-  .box3 {
-    background-color: #9ea1d4;
-    grid-area: box3;
-  }
-
-  .box3:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-  .box3 p {
-    color: white;
-    font-size: 6px;
-  }
-
-  .box4 {
-    background-color: #a8d1d1;
-    grid-area: box4;
-  }
-  .rocket {
     align-items: center;
-    width: 80px;
-  }
-  .box4:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-  .box5 {
-    background-color: #a8d1d1;
-    grid-area: box5;
-  }
-
-  .box5:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-
-  .box5 p {
-    color: white;
-    font-size: 6px;
-  }
-
-  .box6 {
-    background-color: #f1f7b5;
-    grid-area: box6;
-  }
-  .heli {
-    align-items: center;
-    width: 90px;
-  }
-
-  .box6:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-
-  .box7 {
-    background-color: #a8d1d1;
-    grid-area: box7;
-  }
-  .box7:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-
-  .blip {
-    align-items: center;
-    width: 80px;
-  }
-
-  .box8 {
-    background-color: #9ea1d4;
-    grid-area: box8;
-  }
-
-  .box8:hover {
-    transform: translateY(5px);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-  }
-
-  .box8 p {
-    color: white;
-    font-size: 6px;
-  }
-
-  .about {
-    background-color: #9ea1d4;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .about header .name {
-    color: white;
-    font-size: 15px;
-    position: absolute;
-    left: 30px;
-    bottom: -90px;
+    height: 50vh;
+    background: black;
   }
 
-  span {
-    color: black;
+  header ul.navbar li {
+    margin-left: 0;
   }
 
-  .about header .me {
-    font-size: 2vw;
-    color: white;
-    position: absolute;
-    left: 30px;
-    top: 360px;
-  }
-
-  .about header .btn {
-    text-decoration: none;
-    transition: all 0.8s;
+  header ul.navbar li a {
+    font-size: 1.2em;
+    margin: 5px 0;
+    border-radius: 30px;
     display: inline-block;
-    padding: 3px 5px;
-    border-radius: 40px;
-    background: #fd8a8a;
-    color: white;
-    font-size: 3vw;
-    position: absolute;
-    bottom: -200px;
-    left: 30px;
   }
 
-  iframe {
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(body/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+
+  section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  section img#splash {
+    z-index: -1;
+    height: 900px;
+  }
+
+  section img#red {
     display: none;
   }
 
-  .about::before {
-    content: "";
-    position: absolute;
-    bottom: -248px;
-    width: 100%;
-    height: 40px;
-    background: #9ea1d4;
-    z-index: 1000;
-  }
-  .portfolio {
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-
-    background-color: #fd8a8a;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
-  .portfolio .title {
+  section img#coca {
+    width: 1000px;
     position: relative;
-    left: 30px;
-    top: 20px;
-    font-size: 2vw;
+    left: -310px;
   }
 
-  .title2 {
-    font-size: 5vw;
-    font-weight: 600;
-
-    position: relative;
-    left: 30px;
-    top: 30px;
+  section #text {
+    display: none;
+  }
+  section #btn {
+    display: none;
   }
 
-  .description {
-    position: relative;
-    left: 30px;
-    top: 140px;
-    font-size: 1.8vw;
+  .container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "bx1 bx1 bx1"
+      "bx2 bx2 bx2"
+      "bx3 bx4 bx5";
+  }
+  .bx {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+
+    background: white;
+    transition: all 0.8s;
+    cursor: pointer;
   }
 
-  .apple {
-    display: inline-block;
-    padding: 10px 10px;
-    border-radius: 4px;
-    width: 50px;
-    height: 2px;
-    position: relative;
-    top: 144px;
-    left: 30px;
-    background-color: white;
+  .bx1 {
+    background-image: url(mixes/cocktail6.png);
+    background-position: center;
+    background-size: 1670px;
+    grid-area: bx1;
   }
 
-  .apple .ios {
-    font-size: 4px;
-    position: relative;
-    left: 8px;
-    top: -7px;
-  }
-  .App {
-    font-size: 4px;
-    font-weight: 500;
-    position: relative;
-    left: 8px;
-    top: -7px;
+  .bx2 {
+    background-image: url(mixes/cocktail.png);
+    background-position: center;
+    background-size: 500px;
+    grid-area: bx2;
   }
 
-  .logo {
-    width: 13px;
-    position: relative;
-    left: -8px;
-    top: -24px;
+  .bx3 {
+    background-image: url(mixes/cocktail2.jpg);
+    background-position: center;
+    background-size: 280px;
+    grid-area: bx3;
   }
 
-  .samsung {
-    display: inline-block;
-    padding: 10px 10px;
-    border-radius: 4px;
-    width: 50px;
-    height: 2px;
-    position: relative;
-    top: 144px;
-    left: 30px;
-    background-color: white;
-    overflow: hidden;
+  .bx4 {
+    background-image: url(mixes/cocktail3.jpg);
+    background-position: center;
+    background-size: 280px;
+    background-repeat: no-repeat;
+    grid-area: bx4;
   }
 
-  .samsung .android {
-    font-size: 4px;
-    position: relative;
-    left: 8px;
-    top: -7px;
-  }
-  .App1 {
-    font-size: 4px;
-    font-weight: 500;
-    position: relative;
-    left: 8px;
-    top: -7px;
-  }
+  .bx5 {
+    background-image: url(mixes/cocktail4.jpg);
+    background-position: center;
+    background-size: 280px;
 
-  .logo1 {
-    width: 12px;
-    position: relative;
-    left: -8px;
-    top: -24px;
-  }
-
-  .macbook {
-    position: absolute;
-    top: 538px;
-    left: -10px;
-    max-width: 100%;
-
-    overflow: hidden;
-  }
-
-  .mac {
-    height: 100%;
-    width: 240px;
-    overflow-x: hidden;
-  }
-
-  .imgbg {
-    position: absolute;
-    top: 42px;
-    left: 60px;
-    width: 120px;
-    height: 82px;
-    border-radius: 1px;
-    background: url(images/page.png);
-    background-position: top;
-    background-size: 100%;
-    transition: 13s;
-  }
-
-  .imgbg:hover {
-    background-position: bottom;
-  }
-
-  .blob {
-    position: relative;
-    top: -115px;
-    left: 395px;
-    width: 50px;
-  }
-
-  .hover {
-    font-size: 5px;
-    position: relative;
-    left: 410px;
-    bottom: 155px;
-    font-weight: 600;
+    grid-area: bx5;
   }
 }
 
-@media (max-width: 100%) {
-  .container {
-    background-color: #fd8a8a;
-    width: auto;
-    height: 100vh;
+.toggle.active {
+  background: url(body/close.png);
+  background-size: 30px;
+  background-position: center;
+  background-position: no-repeat;
+}
+
+@media (max-width: 1400px) {
+  #text {
+    position: absolute;
+    right: 900px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 70px;
+    z-index: 9;
   }
 
+  #btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #000;
+    font-size: 1.5em;
+    position: absolute;
+    right: 1020px;
+    top: 450px;
+  }
+}
+@media (max-width: 1300px) {
+  section img#splash {
+    z-index: -1;
+    height: 800px;
+  }
+
+  section img#red {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  section img#splash {
+    z-index: -1;
+    height: 800px;
+  }
+
+  section img#red {
+    display: none;
+  }
+  #text {
+    position: absolute;
+    right: 800px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 70px;
+    z-index: 9;
+  }
+
+  #btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #000;
+    font-size: 1.5em;
+    position: absolute;
+    right: 920px;
+    top: 450px;
+  }
+}
+
+@media (max-width: 1100px) {
+  section img#splash {
+    z-index: -1;
+    height: 700px;
+  }
+
+  section img#red {
+    display: none;
+  }
+  #text {
+    position: absolute;
+    right: 700px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 70px;
+    z-index: 9;
+  }
+
+  #btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #000;
+    font-size: 1.5em;
+    position: absolute;
+    right: 820px;
+    top: 450px;
+  }
+}
+
+@media (max-width: 1060px) {
+  section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  section img#splash {
+    z-index: -1;
+    height: 800px;
+  }
+
+  section img#red {
+    display: none;
+  }
+
+  #text {
+    position: absolute;
+    right: 600px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 70px;
+    z-index: 9;
+  }
+
+  #btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #000;
+    font-size: 1.5em;
+    position: absolute;
+    right: 720px;
+    top: 450px;
+  }
+}
+
+@media (max-width: 950px) {
+  form .fav-drink .fav-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  form .fav-drink .drinkss {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 70%;
+    margin: 2px 0;
+    justify-content: space-between;
+  }
+
+  form .drinks {
+    flex-direction: column;
+  }
+
+  .fav-drink .drinks label {
+    display: flex;
+    align-items: center;
+  }
+
+  .fav-drink .drinks2 label {
+    display: flex;
+    align-items: center;
+  }
+
+  .fav-drink .drinks {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 16px 0;
+  }
+
+  .fav-drink .drinks2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 16px 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 580px) {
   .container {
     display: grid;
-    width: auto;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "box1"
-      "box2"
-      "box3"
-      "box5"
-      "box8";
-    grid-gap: 10px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap: 1.7rem;
+    align-items: center;
+    margin-top: 5rem;
   }
 
   .box {
+    height: 200px;
     width: auto;
     border-radius: 10px;
+    overflow: hidden;
+    background: white;
     transition: all 0.8s;
     cursor: pointer;
     position: relative;
@@ -389,126 +350,240 @@
     justify-content: center;
   }
 
-  .box1 {
-    background-color: #fefefe;
-    grid-area: box1;
+  .container1 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "bx1 bx1 bx1"
+      "bx2 bx2 bx2"
+      "bx3 bx4 bx5";
   }
-
-  .box1 p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 7px;
-    font-weight: bold;
-    text-align: center;
-    color: #698269;
+  .box1 {
+    background-image: url(flavours/original.png);
+    background-position: center;
+    background-repeat: no-repeats;
+    background-size: 100px;
   }
 
   .box1:hover {
-    transform: translateY(5px);
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
   }
 
   .box2 {
-    background-color: #a8d1d1;
-    grid-area: box2;
+    background-image: url(flavours/cherry2.png);
+    background-position: center;
+    background-repeat: no-repeats;
+    background-size: 100px;
   }
 
-  .box2 p {
-    color: white;
-    font-size: 6px;
-  }
-  .box2:hover {
-    transform: translateY(5px);
+  .box2:hover:hover {
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
   }
+
   .box3 {
-    background-color: #9ea1d4;
-    grid-area: box3;
+    background-image: url(flavours/vanilla.png);
+    background-position: center;
+    background-repeat: no-repeats;
+    background-size: 100px;
   }
 
   .box3:hover {
-    transform: translateY(5px);
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
-  }
-  .box3 p {
-    color: white;
-    font-size: 6px;
   }
 
   .box4 {
-    background-color: #a8d1d1;
-    grid-area: box4;
-  }
-  .rocket {
-    align-items: center;
-    width: 80px;
+    background-image: url(flavours/cherryvanilla.png);
+    background-position: center;
+    background-repeat: no-repeats;
+    background-size: 100px;
   }
   .box4:hover {
-    transform: translateY(5px);
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
   }
+
   .box5 {
-    background-color: #a8d1d1;
-    grid-area: box5;
+    background-image: url(flavours/zerocaffeine.png);
+    background-position: center;
+    background-repeat: no-repeats;
+    background-size: 100px;
   }
 
   .box5:hover {
-    transform: translateY(5px);
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
-  }
-
-  .box5 p {
-    color: white;
-    font-size: 6px;
   }
 
   .box6 {
-    background-color: #f1f7b5;
-    grid-area: box6;
+    background-image: url(flavours/Starlight.png);
+    background-position: center;
+    background-repeat: no-repeats;
+    background-size: 100px;
   }
-  .heli {
-    align-items: center;
-    width: 90px;
-  }
-
   .box6:hover {
-    transform: translateY(5px);
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+  .in {
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .in {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: black;
+    font-size: 1em;
+  }
+  .bx {
+    height: 180px;
+    width: auto;
+    border-radius: 10px;
+
+    background: white;
+    transition: all 0.8s;
+    cursor: pointer;
+  }
+
+  .bx1 {
+    background-image: url(mixes/cocktail6.png);
+    background-position: center;
+    background-size: 1300px;
+    grid-area: bx1;
+  }
+
+  .bx2 {
+    background-image: url(mixes/cocktail.png);
+    background-position: center;
+    background-size: 500px;
+    grid-area: bx2;
+  }
+
+  .bx3 {
+    background-image: url(mixes/cocktail2.jpg);
+    background-position: center;
+    background-size: 200px;
+    grid-area: bx3;
+  }
+
+  .bx4 {
+    background-image: url(mixes/cocktail3.jpg);
+    background-position: center;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    grid-area: bx4;
+  }
+
+  .bx5 {
+    background-image: url(mixes/cocktail4.jpg);
+    background-position: center;
+    background-size: 200px;
+
+    grid-area: bx5;
+  }
+}
+
+@media (max-width: 515px) {
+  .container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "bx1"
+      "bx2"
+      "bx3"
+      "bx4"
+      "bx5";
+  }
+  .bx {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+
+    background: white;
+    transition: all 0.8s;
+    cursor: pointer;
+  }
+
+  .bx1 {
+    background-image: url(mixes/cocktail6.png);
+    background-position: center;
+    background-size: 1200px;
+    grid-area: bx1;
+  }
+
+  .bx1:hover {
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
   }
 
-  .box7 {
-    background-color: #a8d1d1;
-    grid-area: box7;
+  .bx2 {
+    background-image: url(mixes/cocktail.png);
+    background-position: center;
+    background-size: 500px;
+    grid-area: bx2;
   }
-  .box7:hover {
-    transform: translateY(5px);
+
+  .bx2:hover:hover {
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
   }
 
-  .blip {
-    align-items: center;
-    width: 80px;
+  .bx3 {
+    background-image: url(mixes/cocktail2.jpg);
+    background-position: center;
+    background-size: 380px;
+    grid-area: bx3;
   }
 
-  .box8 {
-    background-color: #9ea1d4;
-    grid-area: box8;
-  }
-
-  .box8:hover {
-    transform: translateY(5px);
+  .bx3:hover {
+    transform: translateY(20px);
     transition: all 0.5s ease;
     opacity: 0.6;
   }
 
-  .box8 p {
-    color: white;
-    font-size: 6px;
+  .bx4 {
+    background-image: url(mixes/cocktail3.jpg);
+    background-position: center;
+    background-size: 470px;
+    background-repeat: no-repeat;
+    grid-area: bx4;
+  }
+  .bx4:hover {
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
+  }
+
+  .bx5 {
+    background-image: url(mixes/cocktail4.jpg);
+    background-position: center;
+    background-size: 470px;
+
+    grid-area: bx5;
+  }
+
+  .bx5:hover {
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    opacity: 0.6;
   }
 }
