@@ -15,29 +15,29 @@ Custom Domain: [http://winonaivana.com/](http://winonaivana.com/)
 
 ## Deployment to Netlify 🔥
 
-1. **Sign up/log in to Netlify.**
+1. Sign up/log in to Netlify.
    ![alt text](login.png)
 
-2. **Once you're logged in, select "Add new site".**
+2. Once you're logged in, select "Add new site".
 
-3. **Select import an existing project since we are importing from a git repository.**
+3. Select import an existing project since we are importing from a git repository.
 
-4. **Then we can connect to a git provider, which in this case is git hub.**
+4. Then we can connect to a git provider, which in this case is git hub.
    ![alt text](import.png)
-5. **Choose your organisation and select the repository where your project is.**
+5. Choose your organisation and select the repository where your project is.
    ![alt text](import1.png)
-6. **Lastly, you can just click on deploy site.**
+6. Lastly, you can just click on deploy site.
    <br>
    <br>
    <br>
 
 ## Buying custom domain 👾
 
-1. **The are many domain registrar, for this assignment I will be using Niagahoster.**
+1. The are many domain registrar, for this assignment I will be using Niagahoster.
 
-2. **You can start by typing your chosen domain name.**
+2. You can start by typing your chosen domain name.
    ![alt text](n.png)
-3. **If it is available you can click on it and start the payment process using your prefered method.**
+3. If it is available you can click on it and start the payment process using your prefered method.
    ![alt text](n1.png)
    <br>
    <br>
